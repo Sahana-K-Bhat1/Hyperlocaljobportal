@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>AthrV Hyper-Local Job Portal</title>
+</head>
+<body>
+  <div class="overall">
+    <div class="content">
+      <div class="head">
+        <h3>Welcome To</h3>
+        <h2 class="heading">AthrV Hyper-Local Job Portal</h2>
+      </div>
+      <div class="containers">
+        <section class="seeker">
+          <h1>Seeker</h1>
+          <p>Search for jobs around You.</p>
+          <div class="find">
+            <a href="/seeker_login"><h2></h2>
+            <button type="button" class="btn btn-primary" id="bt" >Find</button></a>
+          </div>
+        </section>
+
+        <section class="creator">
+          <h1>Creator</h1>
+          <p>Create Jobs And Employ People Around You.</p>
+          <div class="create">
+            <a href="/creator_login"><h2></h2>
+              <button class="btn btn-primary">Create</button></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#password');
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+  });
+</script>
+</html>
